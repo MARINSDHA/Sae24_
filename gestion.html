@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil SAE24</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+   <link rel="icon" href="images/Blagnac.png" type="image/png">
+   <link rel="stylesheet" type="text/css" href="styles/gestion.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="navbar-logo">
+    <a href="#"><img src="images/Blagnac.png" alt="Description de l'image" width="100" height="100"></a>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="./accueil.html">Accueil</a></li>
+    <li><a href="./consultation.html">Consultation</a></li>
+    <li><a href="./cahier.html">Cahier des charges</a></li>
+    <li><a href="./gestion.html">Gestion de projet</a></li>
+    <li><a href="./mentions.html">Mentions Légales</a></li>
+  </ul>
+</nav>
+<h1>Gestion de projet</h1>
+  <div class="container">
+    <div class="column">
+      <h1>Synthèse personnelle</h1>
+      <p><ul>
+            <li>Come: Durant cette Saé, je me suis occupé du livrable 1 dans lequel j’ai fait le Gantt qui a pour but de planifier et répartir les tâches de chacun. De plus je me suis occupé du livrable 2 dans lequel j’ai fait une partie de la cartographie et j’ai aussi fait le schéma de la conception BD.
+Enfin, je me suis occupé de toute la partie dynamique du site avec le php et le javascript :  cette partie a permis de récupérer les données issues de la base de données et de les afficher de manières graphiques sur notre site
+</li>
+<br>
+            <li>Marin: Nombre d’heures de travail : Nous nous sommes toujours retrouvés (au minimum 2 personnes) pour travailler, j’estimerai ce temps passé à 35H. J’ai pu réaliser lors de cette SAE24 :
+-livrable 1 (choix techniques)
+-livrable 2 ( cartographie avec côme)
+-mosquitto_pub</li>
+<br>
+            <li>Kevin: Lors de cette SAÉ, j'ai réalisé la partie qui faisait le lien entre la publication des données binaires et l'affichage sur le site.</li>
+            <br>
+            <li>Oscar: Nombre d'heures de travail (indiv) 12h cartographie + calculs distances et amplitudes (python puis bash),
+</li>
+<br>
+            <li>Pierre: je me suis occupée de la partie Web statique : HTML et CSS </li>
+          </ul></p>
+    </div>
+    <div class="column">
+      <h1>Problèmes rencontrés</h1>
+      <p><ul>
+            <li>Come: Problèmes rencontrés : D’un point de vue technique, j'ai pu rencontrer des problèmes au niveau de la liaison entre le php et le javascript, car au début les données que je récupérais avec mon script php n’étaient pas lues par le javascript. Donc, il a fallu que je les mette au format JSON pour régler ce problème. De plus, au niveau de la gestion des tâches, certaines personnes n’ont pas pu faire leur tâche qui leur était attribuée donc cela a bouleversé notre Gantt de départ. Donc j’ai dû effectuer certaines tâches non prévues ce qui a pu ralentir mes tâches initiales.  
+</li>
+            <br>
+            <li>Marin: Problèmes rencontrés et les solutions apportées (individuel) :
+-  j’ai pu rencontré des problèmes vis à vis du livrable 1. En effet je devais réaliser le « word » sur les choix techniques, cependant à ce moment j’ai eu du mal à avoir une vision détaillée et claire du projet. Au final j’ai rendu ce qui était pour moi plus comme un avancement de notre point de vue sur ce qui est demandé. Quelque chose de non-figé.
+- Lors du livrable 2, la cartographie, je n’arrivais pas non plus à avoir une bonne vue d’ensemble j’ai donc fait une carte 2D à partir d’un script. Cela m’a permis de prendre conscience visuellement des points qui avait la même amplitudes ainsi qu’une bonne vision d’ensemble.
+-lors de l’installation du broker ainsi que la réalisation du mosquitto_pub. J’ai pu rencontré des difficultés sur la demande que mes camarades avaient afin que nos travaux puissent être accordés. J’ai d’abords fait un script qui reprenait totalement la construction de la cartographie (mesures,amplis puis binaires) cependant nous nous sommes ravisés sur le « random » donc le script était obsolète. Puis avec les adaptations en tout genre, dans notre architecture de travail, le script pub a été confronté à beaucoup de changement radicaux.
+
+Difficultés ressenties par rapport à la difficulté estimée des autres SAEs :
+Vis à vis des autres SAE24, je pense que celle de notre groupe était bien plus complexe et complète donc je l’estimerai à 5.</li>
+            <br>
+            <li>Kevin: j'ai rencontré plusieurs problèmes, surtout au niveau de la base de données.
+
+Durant cette partie, il a fallu sélectionner et modifier plusieurs colonnes de la base de données. Cependant, selon le type des colonnes (varchar, BIT, float, etc.), il est nécessairre de spécifier ou non le type de colonne pour que la requête soit réussie.
+
+Pour les colonnes de type BIT (qui sont utilisées en majorité dans cette partie), lors de la sélection d'une colonne binaire déjà existante, il faut écrire : SELECT BIN(nom_colonne).
+
+Pour utiliser une valeur binaire littérale dans une requête SQL, il faut écrire (dans un script bash, par exemple) : "b'$variable'".
+
+Au départ, je ne précisais pas le type dans mes requêtes, ce qui faisait que la plupart d'entre elles ne fonctionnaient pas. Cela a donc été mon plus gros problème lors de ce projet.</li>
+<br>
+            <li>Oscar: Problèmes rencontrés: Niveau cartographie j’ai eu le problème de la distance qui était égale à 0 qui donnait un calcul d'amplitude impossible donc j’ai défini l’amplitude max sur 5 pour palier à ce problème.
+Difficulté de la sae24 plutôt normale vis à vis des autres sae24.</li>
+<br>
+            <li>Pierre: j'ai pu rencontré certains problèmes quand à la recherche d'idée inovantes pour notres site mais pour paliers à cela j'ai fait appel à mes camarades pour trouver de nouvelles idées. </li>
+          </ul></p>
+    </div>
+     
+    <div class="column">
+      <h1>Livrables Techniques</h1>
+      <div class="column3">
+      <div class="column1">
+      <figure>
+        <img src="images/quadrillage.jpg" width="600" height="400">
+        <figcaption>Suivi de notre objet en mouvement</figcaption>
+      </figure>
+      <br>
+      <br>
+      <figure></figure>
+      <img src="images/bd.png" width="600" height="400">
+      <figcaption>Schéma de la base de données</figcaption>
+      </figure>
+      </div>
+      <div class="column2">
+      <figure>
+      <img src="images/gantt.png" width="600" height="400">
+      <figcaption>Schéma du diagramme de Gantt</figcaption>
+      </figure>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".column").fadeIn(1500); // Faire apparaître les divs avec une durée de transition de 1,5 seconde (1500 millisecondes)
+    });
+  </script>
+
+  <footer class="footer">
+  <div class="bas">
+    <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
+  </div>
+</footer>
+</body>
+</html>

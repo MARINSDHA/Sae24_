@@ -1,0 +1,116 @@
+body{
+      background-color: black;
+      font-family: Oswald;
+    }
+    
+    
+    .navbar {
+      font-family: Oswald;
+      background-color: black;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-logo a {
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar-links li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .navbar-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar-links a:hover {
+      color: #000;
+    }
+
+    .container {
+      display: flex;
+      font-family: Oswald;
+    }
+
+    .column {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .column h1 {
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .column p {
+      color: white;
+    }
+
+    button{
+      background-color: skyblue;
+      border-radius: 20px;
+    }
+
+    .footer {
+      background-color: black;
+      color: #fff;
+      padding: 20px 0;
+      border-radius: 20px;
+    }
+
+    .bas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    .grid-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+     #grid {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-gap: 2px;
+      background-color: #eee;
+      
+    }
+.cell {
+      width: 38px;
+      height: 38px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      
+      
+    }
+    .cell img {
+  width: 110%;
+  height: 110%;
+  animation: fadeIn 0.5s ease-in-out;
+  /*object-fit: cover; /* ou d'autres valeurs appropriées pour l'ajustement de l'image */
+}
+
+.cell.moving {
+  transform: translate(100%, 100%);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}

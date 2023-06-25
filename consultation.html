@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil SAE24</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Blagnac.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="styles/consultation.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="#"><img src="images/Blagnac.png" alt="Description de l'image" width="100" height="100"></a>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="./accueil.html">Accueil</a></li>
+      <li><a href="./consultation.html">Consultation</a></li>
+      <li><a href="./cahier.html">Cahier des charges</a></li>
+      <li><a href="./gestion.html">Gestion de projet</a></li>
+      <li><a href="./mentions.html">Mentions Légales</a></li>
+    </ul>
+  </nav>
+
+  <div class="column">
+    <h1>Graphique de consultation</h1>
+    </div>
+      <div class="grid-container">
+  <div id="grid">
+    <!-- The cells will be dynamically generated here -->
+  </div>
+
+    </div>
+
+
+  <footer class="footer">
+    <div class="bas">
+      <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+  const gridSize = 16;
+  const grid = document.getElementById('grid');
+  const cells = []; // Array to store references to the grid cells
+  let currentIndex = 0; // Index of the current cell
+
+  // Create the grid cells
+for (let i = 0; i < gridSize * gridSize; i++) {
+  const cell = document.createElement('div');
+  cell.classList.add('cell');
+
+  grid.appendChild(cell);
+  cells.push(cell);
+}
+
+  function moveObjectWithDelay() {
+    fetch('generate_grid.php')
+      .then(response => response.json())
+      .then(tableauValeurs => {
+        const promises = [];
+
+        tableauValeurs.forEach((position, index) => {
+          const promise = new Promise(resolve => {
+            setTimeout(() => {
+              const cellIndex = position.case_y * gridSize + position.case_x;
+              const cell = cells[cellIndex];
+
+              if (currentIndex > 0) {
+                const previousCellIndex = tableauValeurs[index - 1].case_y * gridSize + tableauValeurs[index - 1].case_x;
+                const previousCell = cells[previousCellIndex];
+                previousCell.innerHTML = ''; // Reset the content of the previous cell
+              }
+
+              const image = document.createElement('img');
+              image.src = 'images/brulin.png'; // Chemin vers l'image "brulin.png"
+              cell.innerHTML = '';
+              cell.appendChild(image); // Path to the image "brulin.png"
+             
+              currentIndex++; // Move to the next cell
+              resolve();
+            }, index * 1000);
+          });
+
+          promises.push(promise);
+        });
+
+        Promise.all(promises).then(() => {
+          if (currentIndex > 0) {
+            const previousCellIndex = tableauValeurs[tableauValeurs.length - 1].case_y * gridSize + tableauValeurs[tableauValeurs.length - 1].case_x;
+            const previousCell = cells[previousCellIndex];
+            previousCell.innerHTML = ''; // Reset the content of the last selected cell
+          }
+        });
+      })
+      .catch(error => console.error('Erreur lors de la récupération des données :', error));
+  }
+  
+  
+  // Call moveObjectWithDelay() to move the initially positioned object
+  moveObjectWithDelay();
+
+});
+
+
+
+
+  </script>
+</body>
+</html>

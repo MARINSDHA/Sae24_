@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil SAE24</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/Blagnac.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="styles/accueil.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="#"><img src="images/Blagnac.png" alt="Description de l'image" width="100" height="100"></a>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="./accueil.html">Accueil</a></li>
+      <li><a href="./consultation.html">Consultation</a></li>
+      <li><a href="./cahier.html">Cahier des charges</a></li>
+      <li><a href="./gestion.html">Gestion de projet</a></li>
+      <li><a href="./mentions.html">Mentions Légales</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="column">
+      <h1>SAE 24: Projet intégratif</h1>
+      <img src="images/raspberry2.jpg">
+    </div>
+    <div class="column">
+      <h1>Equipe</h1>
+      <div class="photo-container">
+        <div class="photo">
+            <img src="images/Pierre.png">
+            <div class="photo-caption">
+                <h3>Pierre Capel</h3>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="images/Marin.png">
+            <div class="photo-caption">
+                <h3>Marin Léveil</h3>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="images/Come.png">
+            <div class="photo-caption">
+                <h3>Come Stiernon</h3>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="images/Kevin.png">
+            <div class="photo-caption">
+                <h3>Kévin Cyrille</h3>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="images/Oskar.png">
+            <div class="photo-caption">
+                <h3>Oscar Lagarrigue</h3>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="column">
+      <h1>Présentation SAE 24 - Localiser une source sonore dans un environnement intérieur</h1>
+      <p>La SAÉ24 est un projet intégratif du département Réseaux et Télécommunications de l'IUT de Blagnac. Son objectif est de localiser une source sonore dans un environnement intérieur en utilisant des microphones et des techniques de traitement du signal. Les étudiants développent des compétences en électricité, réseaux, télécommunications et programmation, tout en créant une interface web pour afficher les résultats de localisation. Le projet est évalué sur la maquette, la documentation et une présentation orale, offrant ainsi une expérience pratique dans un contexte professionnel.</p>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="bas">
+      <p>&copy; 2023 Mon Site. Tous droits réservés.</p>
+    </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".column").fadeIn(1500); // Faire apparaître les divs avec une durée de transition de 1,5 seconde (1500 millisecondes)
+    });
+  </script>
+</body>
+</html>
